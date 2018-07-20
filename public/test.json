@@ -1,0 +1,36 @@
+{
+  "id": "src_1CpYCYD54eC66UQCS55CrnsX",
+  "object": "source",
+  "alipay": {
+    "statement_descriptor": null,
+    "native_url": null,
+    "data_string": null
+  },
+  "amount": 100,
+  "client_secret": "src_client_secret_DG4L4zVsU3Ykgf09OdQjTSgz",
+  "created": 1531991614,
+  "currency": "usd",
+  "flow": "redirect",
+  "livemode": false,
+  "metadata": {},
+  "owner": {
+    "address": null,
+    "email": null,
+    "name": null,
+    "phone": null,
+    "verified_address": null,
+    "verified_email": null,
+    "verified_name": null,
+    "verified_phone": null
+  },
+  "redirect": {
+    "failure_reason": null,
+    "return_url": "http://localhost:3000/success",
+    "status": "pending",
+    "url": "https://hooks.stripe.com/redirect/authenticate/src_1CpYCYD54eC66UQCS55CrnsX?client_secret=src_client_secret_DG4L4zVsU3Ykgf09OdQjTSgz"
+  },
+  "statement_descriptor": null,
+  "status": "pending",
+  "type": "alipay",
+  "usage": "single_use"
+}

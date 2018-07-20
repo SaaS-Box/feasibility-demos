@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<p>{{desc}}</p>
+<form method="post">
+    {{#each params}}
+        {{@key}}: <input name="{{@key}}" type="text" value="{{this}}">
+    {{/each}}
+    <input type="submit" value="Pay $1">
+</form>
