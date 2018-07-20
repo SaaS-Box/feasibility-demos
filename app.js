@@ -1,3 +1,4 @@
+require('dotenv').config()
 var createError = require('http-errors')
 var express = require('express')
 var path = require('path')
@@ -9,6 +10,7 @@ var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 var emailChargeRouter = require('./routes/email-charge')
 var chargeRouter = require('./routes/charge')
+var pricingRouter = require('./routes/pricing')
 
 var app = express()
 
@@ -27,11 +29,12 @@ app.use(sassMiddleware({
     sourceMap: true
 }))
 app.use(express.static(path.join(__dirname, 'public')))
-
+app.locals.host = process.env.HOST;
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/emailpayment', emailChargeRouter)
 app.use('/charge', chargeRouter)
+app.use('/pricing', pricingRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

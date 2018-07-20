@@ -20,7 +20,7 @@ router.post('/', async function (req, res, next) {
 
     const mailOptions = {
         from: 'zhaolei@easyact.cn',
-        to: 'zhaolei@easyact.cn',
+        to: req.body.email,
         subject: 'Renew your SaaS subscription!',
         text: 'That was easy!',
         html: '<a href="http://localhost:3000/emailpayment">Renew my account!</a>'
@@ -31,7 +31,7 @@ router.post('/', async function (req, res, next) {
             return next(error)
         }
         console.log('Email sent: ' + info.response)
-        res.render('index', {desc: 'An email has sent to your mailbox.'})
+        res.render('success', {title: 'Congratulations!', desc: 'An confirm email has sent to your mailbox.'})
     })
 })
 
