@@ -10,12 +10,12 @@ router.get('/', function (req, res, next) {
 
 router.post('/', async function (req, res, next) {
     const transporter = nodemailer.createTransport({
-        host: 'smtp.exmail.qq.com',
-        port: 465,
-        secure: true,
+        host: process.env.EMAIL_SMTP,
+        port: EMAIL_SMTP_PORT,
+        secure: EMAIL_SMTP_SECURE,
         auth: {
-            user: 'zhaolei@easyact.cn',
-            pass: 'Aoo@0916'
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASSWORD
         }
     })
 

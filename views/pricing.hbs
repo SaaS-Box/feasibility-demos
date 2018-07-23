@@ -1,8 +1,34 @@
 <h1>{{title}}</h1>
 <p>{{desc}}</p>
 <form method="post">
-    {{#each params}}
-        {{@key}}: <input name="{{@key}}" type="text" value="{{this}}">
-    {{/each}}
-    <input type="submit" value="Pay $1">
+    <div class="row d-flex">
+        <div class="col">
+            <section class="card">
+                <h2 class="card-header">Basic</h2>
+                <section class="card-body">
+                    <h1>$100/month</h1>
+                    <input class="btn btn-lg btn-success" value="Subscribe!" type="submit"></section>
+            </section>
+        </div>
+        <div class="col">
+            <section class="card">
+                <h2 class="card-header">Business</h2>
+                <section class="card-body">
+                    <h1>$100/month</h1>
+                    <input class="btn btn-lg btn-success" value="Subscribe!" type="submit"></section>
+            </section>
+        </div>
+        <div class="col">
+            <section class="card">
+                <h2 class="card-header">Big Business</h2>
+                <section class="card-body">
+                    <h1>$100/month</h1>
+                    <input class="btn btn-lg btn-success" value="Subscribe!" type="submit"></section>
+            </section>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">email</label>
+        <input class="form-control" id="email" name="email" type="text">
+    </div>
 </form>
